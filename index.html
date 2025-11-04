@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O‘quv Markazi</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+   
+</head>
+
+<body class="dark">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <img width="100px" height="75px" src="./UZIT logo.png" alt="">
+        </div>
+        <nav>
+            <a href="#home">Bosh sahifa</a>
+            <a href="#about">Biz haqimizda</a>
+            <a href="#courses">Kurslar</a>
+            <a href="#teachers">O‘qituvchilar</a>
+            <a href="#contact">Aloqa</a>
+        </nav>
+        <div class="burger">
+            <span></span><span></span><span></span>
+        </div>
+
+        <button id="modeToggle"
+            style="margin-left:10%;padding:8px 12px;border:none;border-radius:8px;background:#ffd600;cursor:pointer;">
+            <i id="modeIcon" class="fa-solid fa-sun"></i>
+        </button>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div id="tsparticles"></div>
+        <div class="hero-content">
+            <h2 class="animate__animated animate__fadeInDown">Kelajakni <span class="typing"></span></h2>
+            <p class="animate__animated animate__fadeInUp">Sifatli ta’lim, zamonaviy metodlar va professional ustozlar
+                bilan</p>
+            <a href="#courses" class="btn animate__animated animate__pulse animate__infinite">Kurslarni ko‘rish</a>
+        </div>
+        <div class="scroll-down"><i class="fa-solid fa-angles-down"></i></div>
+    </section>
+
+    <!-- Sections (Biz haqimizda, Kurslar, O‘qituvchilar, Aloqa) -->
+    <section id="about" data-aos="fade-up">
+        <h2>Biz haqimizda</h2>
+        <p style="text-align:center; max-width:700px; margin:auto;">
+            Bizning o‘quv markazimizda zamonaviy darslar, malakali ustozlar va innovatsion metodlar bilan o‘quvchilarga
+            bilim beramiz. Maqsadimiz – yoshlarimizni kelajak kasblariga tayyorlash.
+        </p>
+    </section>
+
+    <section id="courses">
+        <h2 data-aos="fade-up">Kurslarimiz</h2>
+        <div class="cards">
+            <div class="card" data-aos="flip-left"><i class="fa-solid fa-laptop-code fa-2x"></i>
+                <h3>Frontend</h3>
+                <p>HTML, CSS, JavaScript, React</p>
+            </div>
+            <div class="card" data-aos="flip-left"><i class="fa-solid fa-database fa-2x"></i>
+                <h3>Backend</h3>
+                <p>Node.js, Express, Database</p>
+            </div>
+            <div class="card" data-aos="flip-left"><i class="fa-solid fa-language fa-2x"></i>
+                <h3>Ingliz tili</h3>
+                <p>IELTS, Speaking, Writing</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="teachers">
+        <h2 data-aos="fade-up">O‘qituvchilar</h2>
+        <div class="cards">
+            <div class="teacher" data-aos="zoom-in"><img src="https://i.pravatar.cc/100?img=1">
+                <h3>Aliyev Jamshid</h3>
+                <p>Frontend mentor</p>
+            </div>
+            <div class="teacher" data-aos="zoom-in"><img src="https://i.pravatar.cc/100?img=2">
+                <h3>Karimova Dilnoza</h3>
+                <p>Ingliz tili ustoz</p>
+            </div>
+            <div class="teacher" data-aos="zoom-in"><img src="https://i.pravatar.cc/100?img=3">
+                <h3>Rustamov Aziz</h3>
+                <p>Backend dasturchi</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h2>Aloqa</h2>
+        <p style="text-align:center; max-width:600px; margin:10px auto; font-size:18px; color:#ccc;">
+            Murojaatingizni yuboring, 5 daqiqa ichida siz bilan bog‘lanamiz.
+        </p>
+
+        <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Ismingiz" required>
+            <input type="tel" id="phone" placeholder="Raqamingiz" required>
+            <textarea id="message" rows="5" placeholder="Xabaringizni yozing" required></textarea>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Yuborish</button>
+        </form>
+
+        <p id="response" aria-live="polite"></p>
+    </section>
+
+    <!-- Success message (pastdan chiqib ketadi) -->
+    <div id="successMessage">✅ Xabaringiz yuborildi! Murojaatingizni 5 daqiqa ichida ko'rib chiqamiz.</div>
+
+
+    <footer>
+        <p>© 2025 O‘quv Markaz. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
